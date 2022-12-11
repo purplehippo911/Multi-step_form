@@ -17,6 +17,22 @@ const router = createRouter({
       // which is lazy-loaded when the route is visited.
       component: () => import("../views/Step_2.vue"),
     },
+    {
+      path: "/step-3",
+      name: "step_3",
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import("../views/Step_3.vue"),
+    },
+    {
+      path: "/step-4",
+      name: "step_4",
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import("../views/Step_4.vue"),
+    },
   ],
 });
 

@@ -26,6 +26,7 @@ main {
 .row {
     display:flex;
     flex-direction:column;
+    justify-content:center;
 }
 
 </style>
