@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <div class="form-process">
+  <section class="form-process">
     <div class="container row">
       
       <div class="steps-wrapper">
@@ -21,15 +21,15 @@
           <a class="steps__count" href="#">3</a>
           <p class="steps__text">Step 3</p>
           <h3 class="steps__title">Add-Ons</h3>
-        </div>
+      </div>
       
       <div class="steps-wrapper">
           <a class="steps__count" href="#">4</a>
           <p class="steps__text">Step 4</p>
           <h3 class="steps__title">Summary</h3>
-        </div>
+      </div>
 
       
     </div>
-  </div>
+  </section>
 </template>

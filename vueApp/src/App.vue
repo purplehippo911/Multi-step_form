@@ -5,10 +5,6 @@ import ConfirmationButtons  from "./components/ConfirmationButtons.vue";
 </script>
 
 <template>
-    <nav>
-        <router-link to="/">Home</router-link>
-        <router-link to="/step-2">View-2</router-link>
-    </nav>
     <main>
         <div class="container row">
             <FormProcess/>
@@ -18,15 +14,36 @@ import ConfirmationButtons  from "./components/ConfirmationButtons.vue";
     </main>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
 main {
-   width:100%;
-   padding:2rem; 
+   .row {
+       flex-direction:column;
+   }
 }
 .row {
     display:flex;
-    flex-direction:column;
     justify-content:center;
+}
+
+.container {
+    width:80%;
+    background:greenyellow;
+    margin:0 auto;
+    gap:2rem;
+}
+
+section {
+    width:80%;
+}
+
+.form-process {
+    .row {
+        flex-direction:row;
+    }
+
+    .steps-wrapper {
+        display:flex;
+    }
 }
 
 </style>
