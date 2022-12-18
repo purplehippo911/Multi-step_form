@@ -14,36 +14,55 @@ import ConfirmationButtons  from "./components/ConfirmationButtons.vue";
     </main>
 </template>
 
-<style scoped lang="scss">
+<style lang="scss">
 main {
    .row {
        flex-direction:column;
+       section {
+           width:80%;
+       }
    }
 }
 .row {
     display:flex;
-    justify-content:center;
+    align-items:center;
+    justify-items: center;
 }
 
 .container {
     width:80%;
-    background:greenyellow;
     margin:0 auto;
     gap:2rem;
 }
 
 section {
-    width:80%;
-}
-
-.form-process {
     .row {
         flex-direction:row;
     }
+}
 
-    .steps-wrapper {
-        display:flex;
+.form-process{
+    padding:5rem;
+    background:url("./assets/images/bg-sidebar-mobile.svg") no-repeat;
+    background-size:cover;
+    @media screen and (min-width: 700px) {
+        background:url("./assets/images/bg-sidebar-desktop.svg") no-repeat;
     }
+    .row {
+        justify-content:center;
+        .steps-wrapper {
+            width:20%;
+            .steps__text, .steps__title{
+                display:none;
+            }
+            @media screen and (min-width: 700px) {
+                .steps__text, .steps__title{
+                    display:block;
+                }
+            }
+        }
+    }
+
 }
 
 </style>

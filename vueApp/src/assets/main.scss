@@ -1,9 +1,10 @@
-@import './base.css';
+@import './base.scss';
+@import '../styles/_variables';
 
 #app {
   max-width: 1280px;
   margin: 0 auto;
-  
+  background:$Lightblue;
   font-weight: normal;
 }
 
