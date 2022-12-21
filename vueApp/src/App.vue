@@ -19,27 +19,42 @@ import ConfirmationButtons  from "./components/ConfirmationButtons.vue";
 </template>
 
 <style lang="scss">
-main, header {
-   .row {
-       flex-direction:column;
-       section {
+    .row {
+        display:flex;
+        align-items:center;
+        justify-items: center;
+    }
+    
+    .container {
+        width:80%;
+        margin:0 auto;
+        gap:2rem;
+    }
+    
+    main, header {
+        .row {
+            flex-direction:column;
+            section {
            width:80%;
-       }
-   }
-}
-.row {
-    display:flex;
-    align-items:center;
-    justify-items: center;
+        }
+    }
 }
 
-.container {
-    width:90%;
-    margin:0 auto;
-    gap:2rem;
+main {
+    position: relative;
+    top: -3rem;
+    .container {
+        padding:1.5rem auto;
+        z-index:1;
+        background:$White;
+    }
 }
 
 header {
+    z-index:0;
+    padding:5rem;
+    background:url("./assets/images/bg-sidebar-mobile.svg") no-repeat;
+    background-size:cover;
     .row {
         flex-direction:column;
     }
@@ -52,9 +67,6 @@ section {
 }
 
 .form-process{
-    padding:5rem;
-    background:url("./assets/images/bg-sidebar-mobile.svg") no-repeat;
-    background-size:cover;
     .container {
         width:100%;
     }
@@ -86,6 +98,38 @@ section {
         }
     }
 
+}
+
+.confirmation-buttons {
+    background:$White;
+    padding:2rem;
+    z-index:1;
+    position:fixed;
+    bottom:0rem;
+    .row {
+        .back-button {
+            color:$CoolGray;
+        }
+
+        .next-button {
+            margin-left:auto;
+            padding:.8rem 2.3rem;
+            border-radius: 20px;
+            border:none;
+            background:$Marineblue;
+            color:$White;
+        }
+    }
+}
+
+.finishing-component {
+    .row {
+        flex-direction:column;
+    }
+    .order-confirmation {
+        display:none;
+        opacity:0;
+    }
 }
 
 </style>

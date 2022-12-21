@@ -9,8 +9,8 @@
 <template>
   <section class="confirmation-buttons">
     <div class="container row">
-      <a class="button" href="#">Go Back</a>
-      <button class="button" href="#">Next</button>  
+      <a class="back-button" href="/">Go Back</a>
+      <button class="next-button" href="/step-2">Next</button>  
     </div>
   </section>
 </template>
