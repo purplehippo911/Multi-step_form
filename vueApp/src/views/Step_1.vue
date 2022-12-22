@@ -3,7 +3,7 @@ import MainForm from "../components/MainForm.vue";
 </script>
 
 <template>
-  <main>
+  <div class="form-component">
     <MainForm/>
-  </main>
+  </div>
 </template>

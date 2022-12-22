@@ -10,14 +10,15 @@
       </div>
 
       <form id="form">
-        <label for="name" class="form__label">Name</label>
-        <input type="text" class="form__input">
-        
-        <label for="email address" class="form__label" placeholder="John Doe">Email Address</label>
-        <input type="text" class="form__input" placeholder="something@somewhere.com">
-        
-        <label for="phone number" class="form__label">Phone Number</label>
-        <input type="text" class="form__input" placeholder="e.g +1 234 567 890">
+
+            <label for="name" class="form__label">Name</label>
+            <input type="text" class="form__input" placeholder="e.g. Stephen King">
+          
+          <label for="email address" class="form__label" placeholder="John Doe">Email Address</label>
+          <input type="text" class="form__input" placeholder="e.g. stephenking@lorem.com">
+          
+          <label for="phone number" class="form__label">Phone Number</label>
+          <input type="text" class="form__input" placeholder="e.g. +1 234 567 890">
       </form>
     </div>
   </div>

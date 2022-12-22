@@ -13,9 +13,13 @@ import ConfirmationButtons  from "./components/ConfirmationButtons.vue";
     <main>
         <div class="container row">
             <RouterView/>
-            <ConfirmationButtons/>
         </div>
     </main>
+    <footer>
+        <div class="container row">
+            <ConfirmationButtons/>
+        </div>
+    </footer>
 </template>
 
 <style lang="scss">
@@ -31,7 +35,7 @@ import ConfirmationButtons  from "./components/ConfirmationButtons.vue";
         gap:2rem;
     }
     
-    main, header {
+    main, header, footer {
         .row {
             flex-direction:column;
             section {
@@ -41,11 +45,10 @@ import ConfirmationButtons  from "./components/ConfirmationButtons.vue";
 }
 
 main {
-    position: relative;
-    top: -3rem;
     .container {
-        padding:1.5rem auto;
-        z-index:1;
+        position: relative;
+        top: -3rem;
+        padding:4rem 1rem;
         background:$White;
     }
 }
@@ -84,6 +87,7 @@ section {
             }
         }
     }
+
     @media screen and (min-width: 700px) {
         background:url("./assets/images/bg-sidebar-desktop.svg") no-repeat;
         .row {
@@ -104,8 +108,8 @@ section {
     background:$White;
     padding:2rem;
     z-index:1;
-    position:fixed;
-    bottom:0rem;
+    position:relative;
+    bottom:0;
     .row {
         .back-button {
             color:$CoolGray;
@@ -132,4 +136,29 @@ section {
     }
 }
 
+.form-component {
+    .information__title {
+        font-weight:600;
+        color:$Marineblue;
+    }
+    .information__text {
+        color:$CoolGray;
+    }
+
+    #form {
+        display:flex;
+        flex-direction:column;
+        width:100%;
+        gap:1rem;
+
+        label {
+            color:$Marineblue;
+        }
+
+        input {
+            padding:1em 2em;
+            padding-inline-start:1rem;
+        }
+    }
+}
 </style>
