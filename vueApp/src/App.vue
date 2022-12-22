@@ -45,11 +45,12 @@ import ConfirmationButtons  from "./components/ConfirmationButtons.vue";
 }
 
 main {
+    position: relative;
+    top: -3rem;
     .container {
-        position: relative;
-        top: -3rem;
-        padding:4rem 1rem;
+        border-radius:10px;
         background:$White;
+        padding:2rem 0;
     }
 }
 
@@ -126,18 +127,7 @@ section {
     }
 }
 
-.finishing-component {
-    .row {
-        flex-direction:column;
-    }
-    .order-confirmation {
-        display:none;
-        opacity:0;
-    }
-}
-
-.form-component {
-    .information__title {
+.information__title {
         font-weight:600;
         color:$Marineblue;
     }
@@ -145,20 +135,8 @@ section {
         color:$CoolGray;
     }
 
-    #form {
-        display:flex;
-        flex-direction:column;
-        width:100%;
-        gap:1rem;
-
-        label {
-            color:$Marineblue;
-        }
-
-        input {
-            padding:1em 2em;
-            padding-inline-start:1rem;
-        }
+    h3 {
+        color:$Marineblue
     }
-}
+
 </style>

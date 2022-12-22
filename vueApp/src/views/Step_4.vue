@@ -9,3 +9,15 @@ import OrderConfirmation from '../components/OrderConfirmation.vue';
         <OrderConfirmation/>
     </div>
 </template>
+
+<style scoped lang="scss">
+.finishing-component {
+    .row {
+        flex-direction:column;
+    }
+    .order-confirmation {
+        display:none;
+        opacity:0;
+    }
+}
+</style>
