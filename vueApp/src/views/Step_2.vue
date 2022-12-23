@@ -1,13 +1,13 @@
 <script setup>
 import PlanComponent from '../components/PlanComponent.vue';
-import SubscriptionToggle from '../components/SubscriptionToggle.vue';
+import PlanToggle from '../components/PlanToggle.vue';
 </script>
 
 <template>
   <div class="plan">
 
     <PlanComponent/>
-    <SubscriptionToggle/>
+    <PlanToggle/>
   </div>
   </template>
 
@@ -36,29 +36,29 @@ import SubscriptionToggle from '../components/SubscriptionToggle.vue';
       }
     }
   }
+  .plan-toggler {
+    background:$Magnolia;
+    .row {
+      flex-direction:row;
+      align-items:center;
+    }
+
+    .container {
+      background:inherit;
+    }
+  }
 }
 
 .slider {
-  align-self: center;
   width: 30%;
-  display: grid;
-  grid-template-rows: repeat(2, 1fr);
-  .slider__item,
-  .slider__numbers {
-    width: 100%;
+  .slider__item {
+    width: 80%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
     justify-items: center;
-  }
-  .slider__numbers {
-    color: $CoolGray;
-    align-self: center;
-  }
-  .slider__item {
-    width: 80%;
     justify-self: center;
-    background: $CoolGray;
+    background: $Marineblue;
     padding: 0.1rem;
     border-radius: 20px;
     .slider__ball {

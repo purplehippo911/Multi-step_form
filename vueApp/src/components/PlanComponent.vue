@@ -29,6 +29,7 @@
                         <div class="plan__information">
                             <h3 class="plan__title">Advanced</h3>
                             <p class="plan__price">$12/mo</p>
+                            <p v-if="isYearly" class="plan__price">$12/mo</p>
                         </div>
                     </div>
                 
