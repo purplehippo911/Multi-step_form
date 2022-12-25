@@ -8,6 +8,41 @@
   font-weight: normal;
 }
 
+.row {
+  display:flex;
+  align-items:center;
+  justify-items: center;
+}
+
+.container {
+  width:80%;
+  margin:0 auto;
+  gap:2rem;
+}
+
+.information__title {
+  font-weight:600;
+  color:$Marineblue;
+}
+.information__text {
+color:$CoolGray;
+}
+  
+h3 {
+color:$Marineblue
+}
+
+
+main, header, footer {
+  .row {
+      flex-direction:column;
+      align-items:center;
+      section {
+     width:80%;
+  }
+}
+}
+
 a,
 .green {
   text-decoration: none;
@@ -16,13 +51,15 @@ a,
 }
 
 @media (hover: hover) {
-  a:hover {
+  a
+  
+  :hover {
     color:$Marineblue;
     background: $Pastelblue;
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 800px) {
   body {
     display: flex;
     place-items: center;

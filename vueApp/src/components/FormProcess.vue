@@ -33,3 +33,46 @@
     </div>
   </section>
 </template>
+
+<style lang="scss">
+
+.form-process{
+    .container {
+        width:100%;
+    }
+    .row {
+    
+        .steps-wrapper {
+            width:20%;
+            .steps__count {
+                padding:.5em;
+                border:1px solid $White;
+                border-radius:20px;
+                font-weight:700;
+                &:visited {
+                    background:$Pastelblue;
+                }
+            }
+            .steps__text, .steps__title{
+                display:none;
+            }
+        }
+    }
+
+    @media screen and (min-width: 800px) {
+        background:url("./assets/images/bg-sidebar-desktop.svg") no-repeat;
+        .row {
+            flex-direction:column;
+            align-content:flex-start;
+            .steps-wrapper {
+                display:flex;
+                .steps__text, .steps__title{
+                    display:block;
+                }
+            }
+        }
+    }
+
+}
+
+</style>

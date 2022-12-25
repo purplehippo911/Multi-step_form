@@ -8,7 +8,7 @@ import MainForm from "../components/MainForm.vue";
   </div>
 </template>
 
-<style scoped lang="scss">
+<style lang="scss">
 .form-component {
     
 
