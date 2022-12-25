@@ -16,3 +16,25 @@ import AddonsOptions from '../components/AddonsOptions.vue';
     </div>
  </div>
 </template>
+
+<style lang="scss">
+
+.add-ons-wrapper {
+    .container {
+        width:100%;
+        .add-ons__options {
+            width: 100%;
+            .container {
+                padding:0;
+                width:100%;
+        
+            }
+        }
+    }
+}
+
+.options__option {
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+</style>

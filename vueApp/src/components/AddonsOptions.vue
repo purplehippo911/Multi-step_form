@@ -11,8 +11,8 @@
                 <h3 class="information__title">Online service</h3>
                 <p class="information__text">Access to multiplayer games</p>
             </div>
-
             <a href="#" class="option__price">+$1/mo</a>
+
         </div>    
         
         <div class="options__option">

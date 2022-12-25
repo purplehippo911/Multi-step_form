@@ -38,6 +38,7 @@ import ConfirmationButtons  from "./components/ConfirmationButtons.vue";
     main, header, footer {
         .row {
             flex-direction:column;
+            align-items:center;
             section {
            width:80%;
         }
@@ -82,6 +83,9 @@ section {
                 border:1px solid $White;
                 border-radius:20px;
                 font-weight:700;
+                &:target {
+                    background:$Pastelblue;
+                }
             }
             .steps__text, .steps__title{
                 display:none;
