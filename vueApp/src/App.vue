@@ -1,5 +1,5 @@
 <script setup>
-import { RouterLink, RouterView } from "vue-router";
+import {RouterView} from "vue-router";
 import FormProcess from "./components/FormProcess.vue";
 import ConfirmationButtons  from "./components/ConfirmationButtons.vue";
 </script>
@@ -32,6 +32,10 @@ import ConfirmationButtons  from "./components/ConfirmationButtons.vue";
         .row {
             flex-direction:column;
         }
+        @media screen and (min-width: 800px ) {
+            padding:2rem;
+        }
+        border:2px solid green;
     }
 
 main {
@@ -40,7 +44,6 @@ main {
     .container {
         border-radius:10px;
         background:$White;
-        padding:2rem 0;
     }
 }
 

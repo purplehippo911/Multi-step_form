@@ -43,7 +43,7 @@ main, header, footer {
 }
 }
 
-a,
+.steps__count, a,
 .green {
   text-decoration: none;
   color: $White;
@@ -51,7 +51,7 @@ a,
 }
 
 @media (hover: hover) {
-  a
+  .steps__count
   
   :hover {
     color:$Marineblue;
@@ -70,6 +70,7 @@ a,
     grid-template-columns: 30rem 30rem;
     align-self:center;
     align-items:center;
+    align-content:center;
     padding: 5rem;
     background:$White;
   }
