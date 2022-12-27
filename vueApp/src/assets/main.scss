@@ -10,14 +10,12 @@
 
 .row {
   display:flex;
-  align-items:center;
   justify-items: center;
 }
 
 .container {
   width:80%;
   margin:0 auto;
-  gap:2rem;
 }
 
 .information__title {
@@ -31,7 +29,7 @@ color:$CoolGray;
 h3 {
 color:$Marineblue
 }
-
+ 
 p {
   margin-bottom:0;
 }
@@ -41,9 +39,6 @@ main, header, footer {
   .row {
       flex-direction:column;
       align-items:center;
-      section {
-     width:80%;
-  }
 }
 }
 
@@ -71,11 +66,12 @@ main, header, footer {
 
   #app {
     display: grid;
-    grid-template-columns: 30rem 30rem;
-    align-self:center;
-    align-items:center;
-    align-content:center;
-    padding: 5rem;
+    grid-template-areas:
+    "head main main main"
+    "head foot foot foot"
+    ;
+    padding: 1rem;
     background:$White;
+    border-radius:1rem;
   }
 }

@@ -46,21 +46,20 @@ import { RouterLink } from 'vue-router';
 <style lang="scss">
 
 .form-process{
-    outline:2px solid red;
     .container {
-     outline:2px solid green;
+        width:100%;
     }
     .row {
-        outline:2px solid blue;
         flex-direction:row;
+        justify-content:center;
+        align-items:center;
+        gap:2rem;
     
         .steps-wrapper {
-            outline:2px solid white;
-            width:100%;
             .steps__count {
                 width:2.5rem;
                 height:2.5rem;
-                border:1px solid $White;
+                border:.1rem solid $White;
                 border-radius:50%;
                 text-align:center;
                 font-weight:700;
@@ -81,13 +80,12 @@ import { RouterLink } from 'vue-router';
         background:url("./assets/images/bg-sidebar-desktop.svg") no-repeat;
         .row {
             flex-direction:column;
-            justify-content:flex-start;
-            .steps-wrapper {
-            display:grid;
-            grid-template-columns: repeat(2, 1fr);
             justify-content:center;
-            justify-items:center;
-            align-items:center;
+            .steps-wrapper {
+                display:grid;
+                grid-template-columns: repeat(2, 1fr 2fr);
+                justify-items:center;
+                align-items:center;
                 .information__title, .information__text{
                     display:block;
                     text-transform:uppercase;

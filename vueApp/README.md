@@ -1,8 +1,3 @@
-# vueApp
-
-
-- ## [Recommended IDE Setup](#recommended-ide-setup)
-
 # Frontend Mentor - Multi-step form solution
 
 This is a solution to the [Multi-step form challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/multistep-form-YVAnSdqQBJ). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
@@ -20,8 +15,7 @@ This is a solution to the [Multi-step form challenge on Frontend Mentor](https:/
   - [Useful resources](#useful-resources)
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
+- ## [Recommended IDE Setup](#recommended-ide-setup)
 
 ## Overview
 
@@ -96,9 +90,10 @@ Use this section to outline areas that you want to continue focusing on in futur
 ### Useful resources
 
 - [Blog article about how to make a circle in CSS](https://blog.hubspot.com/website/css-border-radius-circle) - This helped me with making a perfectly round circle.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
 
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [Mozilla DOCs](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-areas) - This is an amazing article which helped me to recall how to use `grid-template-areas` and `grid-areas` for aligning multiple elements in Grid. I'd recommend this website to anyone  that needs help understanding things and concepts in CSS, JavaScript and HTML.
+- [Vue Router Docs](https://router.vuejs.org/guide/#router-view) - This is an amazing article which helped me to recall how to use Vue Router correctly to route to different views in my app.
+- [Take control of background images by Kevin Powell](https://www.youtube.com/watch?v=3T_Jy1CqH9k) - This is a amazing video which helped me to understand how to use `background-image`'s correctly without the picture being cropped to much and how to make the images look better.
 
 ## Author
 
