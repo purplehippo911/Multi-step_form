@@ -1,11 +1,24 @@
 @import './base.scss';
 @import '../styles/_variables';
 
+ *, *::before, *::after {
+  box-sizing:border-box;
+}
+
+* {
+  margin:0;
+  padding:0;
+}
+
+
 #app {
-  max-width: 1280px;
+  max-width: 1000px;
   margin: 0 auto;
+  padding:6rem;
+  outline:5px solid green;
   background:$Lightblue;
   font-weight: normal;
+  transition:0.7s ease-in-out;
 }
 
 .row {
@@ -19,28 +32,25 @@
   margin:0 auto;
 }
 
-.information__title {
-  font-weight:600;
-  color:$Marineblue;
-}
-.information__text {
-color:$CoolGray;
-}
-  
 h3 {
-color:$Marineblue
+  color:$Marineblue
 }
- 
+
 p {
+  color:$CoolGray;
   margin-bottom:0;
 }
 
+img, picture, input, form {
+  max-width:100%;
+  display:block;
+}
 
 main, header, footer {
+  outline:5px solid green;
   .row {
-      flex-direction:column;
-      align-items:center;
-}
+    flex-direction:column;
+  }
 }
 
 .steps__count, a,
@@ -68,9 +78,10 @@ main, header, footer {
   #app {
     display: grid;
     grid-template-areas:
-    "head main main main"
-    "head foot foot foot"
+    "head main main"
+    "head foot foot"
     ;
+    align-items: center;
     padding: 1rem;
     background:$White;
     border-radius:1rem;

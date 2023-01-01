@@ -5,54 +5,62 @@ import ConfirmationButtons from "./components/ConfirmationButtons.vue";
 </script>
 
 <template>
-    <header>
-        <div class="container row">
-            <FormProcess />
-        </div>
-    </header>
-    <main>
-        <div class="container row">
-            <RouterView />
-        </div>
-    </main>
-    <footer>
-        <div class="container row">
-            <ConfirmationButtons />
-        </div>
-    </footer>
+        <header>
+            <div class="container row">
+                <FormProcess />
+            </div>
+        </header>
+        <main>
+            <div class="container row">
+                <RouterView />
+            </div>
+        </main>
+        <footer>
+            <div class="container row">
+                <ConfirmationButtons />
+            </div>
+        </footer>
 </template>
 
 <style scoped lang="scss">
 header {
-    padding: 8rem 0rem;
+    height:100%;
+    width:100%;
+    padding:5rem;
     background-color: $Marineblue;
     background: url("./assets/images/bg-sidebar-mobile.svg") no-repeat;
     background-size:cover;
-
+    
     .row {
+        width:100%;
         flex-direction: column;
-        align-items: center;
+        align-items:center;
+        justify-content: center;
+        align-self: center;
     }
-
+    
     @media screen and (min-width: 800px) {
         background: url("./assets/images/bg-sidebar-desktop.svg") no-repeat;
         border-radius: 1rem;
         grid-area: head;
+        width:70%;
+        padding:1rem;
     }
 }
 
 main {
     position: relative;
     top: -3rem;
-
+    z-index:1;
     .container {
-        max-width: 500px;
+        max-width: 600px;
+        padding:5rem;
         border-radius: 1rem;
         background: $White;
     }
 
     @media screen and (min-width: 800px) {
-        padding: 5rem;
+        padding: 3rem 0;
         grid-area: main;
         top:0;
     }
@@ -61,7 +69,7 @@ main {
 
 section {
     .row {
-        flex-direction: row;
+        justify-content:flex-start;
     }
 }
 
