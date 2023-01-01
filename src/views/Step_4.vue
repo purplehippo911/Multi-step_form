@@ -1,12 +1,16 @@
 <script setup>
+import InformationComponent from '../components/InformationComponent.vue';
 import SummaryComponent from '../components/SummaryComponent.vue';
 import OrderConfirmation from '../components/OrderConfirmation.vue';
 </script>
 
 <template>
     <div class="finishing-component">
-        <SummaryComponent/>
-        <OrderConfirmation/>
+        <div class="container row">
+            <InformationComponent informationTitle="Pick add-ons" informationText="Add-ons help enhance your gaming experience."/>
+            <SummaryComponent/>
+            <OrderConfirmation/>
+        </div>
     </div>
 </template>
 

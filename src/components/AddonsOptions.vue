@@ -2,9 +2,9 @@
 </script>
 
 <template>
- <div class="add-ons__options">
+ <section class="add-ons__options">
     <div class="container row">
-        <div class="options__option">
+        <section class="options__option">
             <input type="checkbox" name="checkbox" id="checkbox">
             
             <div class="option__information">
@@ -12,10 +12,9 @@
                 <p class="information__text">Access to multiplayer games</p>
             </div>
             <a href="#" class="option__price">+$1/mo</a>
-
-        </div>    
+        </section>    
         
-        <div class="options__option">
+        <section class="options__option">
             <input type="checkbox" name="checkbox" id="checkbox">
             
             <div class="option__information">
@@ -24,9 +23,9 @@
             </div>
 
             <a href="#" class="option__price">+$2/mo</a>
-        </div>    
+        </section>    
         
-        <div class="options__option">
+        <section class="options__option">
             <input type="checkbox" name="checkbox" id="checkbox">
             
             <div class="option__information">
@@ -35,7 +34,15 @@
             </div>
     
             <a href="#" class="option__price">+$2/mo</a>
-        </div>    
+        </section>    
     </div>
- </div>
+</section>
 </template>
+
+<style scoped lang="scss">
+.options__option {
+    width:100%;
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+</style>

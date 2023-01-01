@@ -1,14 +1,59 @@
 @import './base.scss';
 @import '../styles/_variables';
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  background:$Lightblue;
-  font-weight: normal;
+ *, *::before, *::after {
+  box-sizing:border-box;
 }
 
-a,
+* {
+  margin:0;
+  padding:0;
+}
+
+
+#app {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding:6rem;
+  outline:5px solid green;
+  background:$Lightblue;
+  font-weight: normal;
+  transition:0.7s ease-in-out;
+}
+
+.row {
+  display:flex;
+  justify-content: center;
+  align-items:center;
+}
+
+.container {
+  width:100%;
+  margin:0 auto;
+}
+
+h3 {
+  color:$Marineblue
+}
+
+p {
+  color:$CoolGray;
+  margin-bottom:0;
+}
+
+img, picture, input, form {
+  max-width:100%;
+  display:block;
+}
+
+main, header, footer {
+  outline:5px solid green;
+  .row {
+    flex-direction:column;
+  }
+}
+
+.steps__count, a,
 .green {
   text-decoration: none;
   color: $White;
@@ -16,13 +61,15 @@ a,
 }
 
 @media (hover: hover) {
-  a:hover {
+  .steps__count
+  
+  :hover {
     color:$Marineblue;
     background: $Pastelblue;
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 800px) {
   body {
     display: flex;
     place-items: center;
@@ -30,10 +77,13 @@ a,
 
   #app {
     display: grid;
-    grid-template-columns: 30rem 30rem;
-    align-self:center;
-    align-items:center;
-    padding: 5rem;
+    grid-template-areas:
+    "head main main"
+    "head foot foot"
+    ;
+    align-items: center;
+    padding: 1rem;
     background:$White;
+    border-radius:1rem;
   }
 }
