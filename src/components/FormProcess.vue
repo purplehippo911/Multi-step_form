@@ -46,17 +46,16 @@ import { RouterLink } from 'vue-router';
 
 .form-process{
     .container {
-        max-width:100%;
+        padding:2rem;
     }
     .row {
-        flex-direction:center;
+        width:100%;
+        flex-direction:row;
         justify-content:center;
         align-items:center;
         gap:2rem;
-        outline:2px solid blue;
     
         .steps-wrapper {
-            outline:2px solid green;
             .steps__count {
                 width:2.5rem;
                 height:2.5rem;
@@ -67,7 +66,6 @@ import { RouterLink } from 'vue-router';
                 display: flex;
                 align-items: center;
                 justify-content:center;
-                outline:2px solid red;
                 &:is(:active, :target, :visited, :active) {
                     background:$Pastelblue;
                 }
@@ -92,7 +90,6 @@ import { RouterLink } from 'vue-router';
                 .information__title, .information__text{
                     display:block;
                     text-transform:uppercase;
-                    outline:2px solid red;
                 }
 
                 .information__title {

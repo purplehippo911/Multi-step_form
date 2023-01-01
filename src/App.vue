@@ -30,9 +30,12 @@ header {
     background-color: $Marineblue;
     background: url("./assets/images/bg-sidebar-mobile.svg") no-repeat;
     background-size:cover;
+
+    .container {
+        max-width:100%;
+    }
     
     .row {
-        width:100%;
         flex-direction: column;
         align-items:center;
         justify-content: center;
@@ -41,9 +44,10 @@ header {
     
     @media screen and (min-width: 800px) {
         background: url("./assets/images/bg-sidebar-desktop.svg") no-repeat;
-        border-radius: 1rem;
+        background-size:100%;
+        border-radius: 2rem;
         grid-area: head;
-        width:70%;
+        width:62%;
         padding:1rem;
     }
 }
@@ -60,7 +64,6 @@ main {
     }
 
     @media screen and (min-width: 800px) {
-        padding: 3rem 0;
         grid-area: main;
         top:0;
     }

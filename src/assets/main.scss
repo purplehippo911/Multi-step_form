@@ -15,7 +15,6 @@
   max-width: 1000px;
   margin: 0 auto;
   padding:6rem;
-  outline:5px solid green;
   background:$Lightblue;
   font-weight: normal;
   transition:0.7s ease-in-out;
@@ -24,7 +23,6 @@
 .row {
   display:flex;
   justify-content: center;
-  align-items:center;
 }
 
 .container {
@@ -41,13 +39,12 @@ p {
   margin-bottom:0;
 }
 
-img, picture, input, form {
+img, picture, input, label, form {
   max-width:100%;
   display:block;
 }
 
 main, header, footer {
-  outline:5px solid green;
   .row {
     flex-direction:column;
   }

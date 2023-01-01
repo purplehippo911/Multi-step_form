@@ -14,5 +14,8 @@ import MainForm from "../components/MainForm.vue";
 
 <style lang="scss">
 .form-component {
+  .row {
+    gap:2rem;
+  }
 }
 </style>

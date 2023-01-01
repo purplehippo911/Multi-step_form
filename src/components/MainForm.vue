@@ -27,16 +27,16 @@
 <style scoped lang="scss">
  #form {
   width:100%;
-  outline:2px solid red;
   .row{
     gap:2rem;
   }
   .form__input-wrapper {
+    width:100%;
     label {
         color:$Marineblue;
-    }
+      }
 
-    input {
+      input {
         width:100%;
         padding:1em 2em;
         padding-inline-start:1rem;

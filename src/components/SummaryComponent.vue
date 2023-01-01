@@ -4,13 +4,6 @@
 <template>
     <div class="summary">
         <div class="container row">
-            <section class="summary-information">
-                <div class="container row">
-                    <h2 class="informatinon__title">Finishing up</h2>
-                    <p class="information__text">Double-check everything looks OK before confirming.</p>
-                </div>
-            </section>
-
             <section class="summary-primary">
                 <div class="container grid">
                     <div class="summary__section summary__plan">
