@@ -1,17 +1,12 @@
 <script setup>
+import InformationComponent from '../components/InformationComponent.vue';
 import AddonsOptions from '../components/AddonsOptions.vue';
 </script>
 
 <template>
  <div class="add-ons-wrapper">
     <div class="container row">
-        <div class="add-ons__information">
-            <h2 class="information__title">Pick add-ons</h2>
-            <p class="information__text">
-                Add-ons help enhance your gaming experience.
-            </p>
-        </div>
-
+        <InformationComponent informationTitle="Pick add-ons" informationText="Add-ons help enhance your gaming experience."/>
         <AddonsOptions/>
     </div>
  </div>
@@ -33,8 +28,5 @@ import AddonsOptions from '../components/AddonsOptions.vue';
     }
 }
 
-.options__option {
-    display:grid;
-    grid-template-columns: repeat(3, 1fr);
-}
+
 </style>

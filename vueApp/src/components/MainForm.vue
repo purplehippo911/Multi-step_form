@@ -2,24 +2,45 @@
 </script>
 
 <template>
-  <div class="form">
+  <form id="form">
     <div class="container row">
-      <div class="information">
-        <h2 class="information__title">Personal info</h2>
-        <p class="information__text">Please provide your name, email address, and phone number.</p>
+
+      <div class="form__input-wrapper">
+        <label for="name" class="form__label">Name</label>
+        <input type="text" class="form__input" placeholder="e.g. Stephen King">
       </div>
-
-      <form id="form">
-
-            <label for="name" class="form__label">Name</label>
-            <input type="text" class="form__input" placeholder="e.g. Stephen King">
           
-          <label for="email address" class="form__label" placeholder="John Doe">Email Address</label>
-          <input type="text" class="form__input" placeholder="e.g. stephenking@lorem.com">
+      <div class="form__input-wrapper">
+        <label for="email address" class="form__label" placeholder="John Doe">Email Address</label>
+        <input type="text" class="form__input" placeholder="e.g. stephenking@lorem.com">
+      </div>
           
-          <label for="phone number" class="form__label">Phone Number</label>
-          <input type="text" class="form__input" placeholder="e.g. +1 234 567 890">
-      </form>
+
+      <div class="form__input-wrapper">
+        <label for="phone number" class="form__label">Phone Number</label>
+        <input type="text" class="form__input" placeholder="e.g. +1 234 567 890">
+      </div>
     </div>
-  </div>
+  </form>
 </template>
+
+<style scoped lang="scss">
+ #form {
+  width:100%;
+  outline:2px solid red;
+  .row{
+    gap:2rem;
+  }
+  .form__input-wrapper {
+    label {
+        color:$Marineblue;
+    }
+
+    input {
+        width:100%;
+        padding:1em 2em;
+        padding-inline-start:1rem;
+    }
+  }
+    }
+</style>
