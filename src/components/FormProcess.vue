@@ -15,7 +15,7 @@ import { RouterLink } from 'vue-router';
       </section>
       
       <section class="steps-wrapper">
-          <router-link class="steps__count" to="/step-2">2</router-link>
+          <router-link class="steps__count" to="/plan">2</router-link>
           <div class="steps__information">
               <p class="information__text">Step 2</p>
               <h3 class="information__title">Select Plan</h3>
@@ -23,7 +23,7 @@ import { RouterLink } from 'vue-router';
       </section>
       
       <section class="steps-wrapper">
-          <router-link class="steps__count" to="/step-3">3</router-link>
+          <router-link class="steps__count" to="/add_ons">3</router-link>
           <div class="steps__information">
               <p class="information__text">Step 3</p>
               <h3 class="information__title">Add-Ons</h3>
@@ -31,7 +31,7 @@ import { RouterLink } from 'vue-router';
       </section>
       
       <section class="steps-wrapper">
-          <router-link class="steps__count" to="/step-4">4</router-link>
+          <router-link class="steps__count" to="/summary">4</router-link>
           <div class="steps__information">    
             <p class="information__text">Step 4</p>
             <h3 class="information__title">Summary</h3>

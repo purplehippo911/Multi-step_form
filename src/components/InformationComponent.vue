@@ -17,6 +17,10 @@ defineProps ({
 
 <style scoped lang="scss">
 
+.row {
+    gap:0;
+}
+
 .information__title {
   font-weight:600;
   color:$Marineblue;

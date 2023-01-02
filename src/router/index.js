@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router";
-import Step_1 from "../views/Step_1.vue";
+import MainView from "../views/MainView.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -7,31 +7,31 @@ const router = createRouter({
     {
       path: "/",
       name: "home",
-      component: Step_1,
+      component: MainView,
     },
     {
-      path: "/step-2",
-      name: "step_2",
+      path: "/plan",
+      name: "plan",
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import("../views/Step_2.vue"),
+      component: () => import("../views/PlanView.vue"),
     },
     {
-      path: "/step-3",
-      name: "step_3",
+      path: "/add_ons",
+      name: "add_ons",
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import("../views/Step_3.vue"),
+      component: () => import("../views/AddOnsView.vue"),
     },
     {
-      path: "/step-4",
-      name: "step_4",
+      path: "/summary",
+      name: "SummaryView",
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import("../views/Step_4.vue"),
+      component: () => import("../views/SummaryView.vue"),
     },
   ],
 });

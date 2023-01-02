@@ -1,21 +1,30 @@
 <script>
 export default {
-  setup() {
-   const incrementPage = () => {
-      router.go(1);
+   methods: {
+     incrementPage() {
+      if(this.$route.path == "/")
+       this.$router.push("/plan");
+      else if(this.$route.path == "/plan")
+        this.$router.push("/add_ons")
+      else if(this.$route.path == "/add_ons")
+        this.$router.push("/summary")
+      else
+        throw errror;
+        console.log("cant route any further")
+      }
+      ,
+      decrementPage() {
+        this.$router.go(-1);
+      }
     }
-    const decrementPage = () => {
-      router.go(-1);
-    }
-  },
 }
 </script>
 
 <template>
   <section class="confirmation-buttons">
     <div class="container row">
-      <a class="back-button" href="/">Go Back</a>
-      <button class="next-button" @click="incrementPage()">Next</button>  
+      <a class="back-button" @click="decrementPage">Go Back</a>
+      <button class="next-button" @click="incrementPage">Next</button>  
     </div>
   </section>
 </template>
@@ -41,6 +50,7 @@ export default {
             border-radius: 1rem;
             border:none;
             align-self: center;
+            cursor:pointer;
             background:$Marineblue;
             color:$White;
           }

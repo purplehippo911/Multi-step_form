@@ -2,7 +2,7 @@
 </script>
 
 <template>
- <section class="add-ons__options">
+<section class="add-ons__options">
     <div class="container row">
         <section class="options__option">
             <input type="checkbox" name="checkbox" id="checkbox">
@@ -33,7 +33,7 @@
                 <p class="information__text">Custom theme on your profile</p>
             </div>
     
-            <a href="#" class="option__price">+$2/mo</a>
+            <strong class="option__price">+$2/mo</strong>
         </section>    
     </div>
 </section>
@@ -43,6 +43,28 @@
 .options__option {
     width:100%;
     display:grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(33%, 1fr));
+    align-items:center;
+    
+    background:$Alabaster;
+    border:1px solid $Marineblue;
+    padding:1.5rem;
+
+    &:has(focus) {
+        background:red;
+    }
 }
+
+.add-ons__options {
+    width: 100%;
+    .container {
+        padding:0;
+        width:100%;
+    }
+}
+
+.option__price {
+    color:$Purplishblue;
+}
+
 </style>

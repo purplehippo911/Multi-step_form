@@ -58,7 +58,7 @@ main {
     z-index:1;
     .container {
         max-width: 600px;
-        padding:5rem;
+        padding:0 3rem;
         border-radius: 1rem;
         background: $White;
     }

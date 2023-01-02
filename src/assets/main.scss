@@ -12,9 +12,8 @@
 
 
 #app {
-  max-width: 1000px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding:6rem;
   background:$Lightblue;
   font-weight: normal;
   transition:0.7s ease-in-out;
@@ -23,6 +22,7 @@
 .row {
   display:flex;
   justify-content: center;
+  gap:2rem;
 }
 
 .container {

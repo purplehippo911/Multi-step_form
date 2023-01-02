@@ -15,11 +15,4 @@ import PlanToggle from '../components/PlanToggle.vue';
 </template>
 
 <style lang="scss">
-
-.plan {
-  .row {
-    gap:2rem;
-  }
-  
-}
 </style>

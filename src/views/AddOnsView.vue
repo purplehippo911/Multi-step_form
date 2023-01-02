@@ -12,21 +12,5 @@ import AddonsOptions from '../components/AddonsOptions.vue';
  </div>
 </template>
 
-<style lang="scss">
-
-.add-ons-wrapper {
-    .container {
-        width:100%;
-        .add-ons__options {
-            width: 100%;
-            .container {
-                padding:0;
-                width:100%;
-        
-            }
-        }
-    }
-}
-
-
+<style scoped lang="scss">
 </style>
