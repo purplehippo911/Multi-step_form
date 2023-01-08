@@ -2,16 +2,17 @@
 </script>
 
 <template>
-    <div class="plan-component">
+    <section class="plan-component">
         <div class="container row">
+
             <section class="plan__box plan__box--arcade">
                 <picture class="image__wrapper">
                     <img src="../assets/images/icon-arcade.svg" alt="Joystick Drawing. Arcade plan.">
                 </picture>
-                    <div class="plan__information">
-                        <h3 class="plan__title">Arcade</h3>
-                        <p class="plan__price">$9/mo</p>
-                    </div>
+                <div class="plan__information">
+                    <h3 class="plan__title">Arcade</h3>
+                    <p class="plan__price">$9/mo</p>
+                </div>
             </section>
 
             <section class="plan__box plan__box--arcade" href="#">
@@ -36,7 +37,7 @@
                 </div>
             </section>
         </div>
-    </div>
+    </section>
 </template>
 
 <style scoped lang="scss">

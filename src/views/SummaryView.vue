@@ -1,5 +1,5 @@
 <script setup>
-    import InformationComponent from '../components/InformationComponent.vue';
+    import HeroComponent from '../components/HeroComponent.vue';
     import SummaryComponent from '../components/SummaryComponent.vue';
     import OrderConfirmation from '../components/OrderConfirmation.vue';
 </script>
@@ -8,7 +8,7 @@
     <section class="summary-view">
         <div class="container row">
             <section class="primary-section"> 
-                <InformationComponent informationTitle="Finishing up" informationText="Double-check everything looks OK before."/>
+                <HeroComponent informationTitle="Finishing up" informationText="Double-check everything looks OK before."/>
                 <SummaryComponent/>
             </section>
 
@@ -20,13 +20,14 @@
 </template>
 
 <style scoped lang="scss">
-.finishing-view {
+.summary-view {
     .row {
         flex-direction:column;
-    }
-    .order-confirmation {
-        display:none;
-        opacity:0;
+
+        .secondary-section {
+            display:none;
+            opacity:0;
+        }
     }
 }
 </style>

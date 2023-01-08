@@ -4,17 +4,29 @@ export default {
      incrementPage() {
       if(this.$route.path == "/")
        this.$router.push("/plan");
-      else if(this.$route.path == "/plan")
+      else if(this.$route.path == "/plan") {
+        this.$refs.backButton.style.display = "block";
+        this.$refs.backButton.style.opacity = "1";
         this.$router.push("/add_ons")
+      }
       else if(this.$route.path == "/add_ons")
         this.$router.push("/summary")
       else
-        throw errror;
+        throw error;
         console.log("cant route any further")
       }
       ,
       decrementPage() {
-        this.$router.go(-1);
+        if(this.$route.path == "/") {
+          this.$refs.backButton.style.display = "hidden";
+          this.$refs.backButton.style.opacity = "0";
+          return "Can't go beyond this page!";
+        }
+        else {
+          this.$refs.backButton.style.display = "block";
+          this.$refs.backButton.style.opacity = "1";
+          this.$router.go(-1);
+        }
       }
     }
 }
@@ -23,7 +35,7 @@ export default {
 <template>
   <section class="confirmation-buttons">
     <div class="container row">
-      <a class="back-button" @click="decrementPage">Go Back</a>
+      <a class="back-button" ref="backButton" @click="decrementPage">Go Back</a>
       <button class="next-button" @click="incrementPage">Next</button>  
     </div>
   </section>
@@ -42,6 +54,8 @@ export default {
         .back-button {
             color:$CoolGray;
             padding:2rem;
+            display:none;
+            opacity:0;
           }
           
           .next-button {
