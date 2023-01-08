@@ -36,7 +36,7 @@ export default {
   <section class="confirmation-buttons">
     <div class="container row">
       <a class="back-button" ref="backButton" @click="decrementPage">Go Back</a>
-      <button class="next-button" @click="incrementPage">Next</button>  
+      <button class="next-button" @click="incrementPage">Next Step</button>  
     </div>
   </section>
 </template>
@@ -56,17 +56,25 @@ export default {
             padding:2rem;
             display:none;
             opacity:0;
+            &:hover, &:focus {
+              background:$Purplishblue;
+            }
           }
           
           .next-button {
             margin-left:auto;
-            padding: .8rem 2.3rem;
+            padding: .5rem 1.5rem;
             border-radius: 1rem;
+            font:inherit;
+            font-weight:500;
             border:none;
             align-self: center;
             cursor:pointer;
             background:$Marineblue;
             color:$White;
+            &:hover, &:focus {
+              background:$Purplishblue;
+            }
           }
         }
 }

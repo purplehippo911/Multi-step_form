@@ -40,8 +40,14 @@
       input {
         width:100%;
         padding:1em 2em;
+        color:$Pastelblue;
         padding-inline-start:1rem;
+        border-radius: .5rem;
+        border:2px solid $Pastelblue;
+        &:hover, &:focus-visible {
+          border: 1px solid $Purplishblue;
+        }
     }
   }
-    }
+ }
 </style>

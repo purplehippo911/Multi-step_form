@@ -62,7 +62,7 @@
                 display: flex;
                 align-items: center;
                 justify-content:center;
-                &:is(:active, :target, :visited, :active) {
+                &:active, &:target, &:visited, &:active, &:hover {
                     background:$Pastelblue;
                 }
             }
