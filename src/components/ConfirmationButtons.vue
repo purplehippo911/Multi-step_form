@@ -1,29 +1,49 @@
 <script>
+
 export default {
-   methods: {
-     incrementPage() {
-      if(this.$route.path == "/")
-       this.$router.push("/plan");
-      else if(this.$route.path == "/plan")
+  data() {
+      return {
+        isBackButtonVisible:false
+      }
+    },
+    methods: {
+      incrementPage() {
+        if(this.$route.path == "/") {
+          this.$router.push("/plan");
+          this.isBackButtonVisible = true;
+      }
+      else if(this.$route.path == "/plan") {
         this.$router.push("/add_ons")
+      }
       else if(this.$route.path == "/add_ons")
         this.$router.push("/summary")
       else
         throw errror;
         console.log("cant route any further")
-      }
-      ,
-      decrementPage() {
-        this.$router.go(-1);
-      }
+    },
+    
+    decrementPage() {
+      if(this.$route.path == "/plan")
+        this.$router.push("/");
+        this.isBackButtonVisible = false;
+      else if(this.$route.path == "/add_ons")
+        this.$router.push("/plan");
+      else if(this.$route.path == "/summary") 
+        this.$router.push("/add_ons");  
+      else 
+        return "Cant turn back."
     }
-}
+  },
+  mounted() {
+    this.checkBackButton;
+  },
+} 
 </script>
 
 <template>
   <section class="confirmation-buttons">
     <div class="container row">
-      <a class="back-button" @click="decrementPage">Go Back</a>
+      <a class="back-button" v-show="isBackButtonVisible" @click="decrementPage">Go Back</a>
       <button class="next-button" @click="incrementPage">Next</button>  
     </div>
   </section>
