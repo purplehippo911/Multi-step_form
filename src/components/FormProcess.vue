@@ -38,20 +38,23 @@
   </section>
 </template>
 
-<style lang="scss">
+<style scoped lang="scss">
 
 .form-process{
-    .container {
-        padding:2rem;
-    }
+    background: url("../assets/images/bg-sidebar-mobile.svg") no-repeat;
+    background-size:100%;
+    padding:8rem;
+    width:100%;
+    height:100%;
+    outline:2px solid red;
     .row {
-        width:100%;
         flex-direction:row;
         justify-content:center;
-        align-items:center;
+        align-self:center;
         gap:2rem;
-    
+        
         .steps-wrapper {
+            width:100%;
             .steps__count {
                 width:2.5rem;
                 height:2.5rem;
@@ -71,20 +74,25 @@
             }
         }
     }
-
+    
     @media screen and (min-width: 800px) {
-        background:url("./assets/images/bg-sidebar-desktop.svg") no-repeat;
+        padding:2rem 0;
+        border-radius: 2rem;
+        background:url("../assets/images/bg-sidebar-desktop.svg") no-repeat;
         .row {
+            width:70%;
             flex-direction:column;
+            justify-content:stretch;
+            align-self:center;
             .steps-wrapper {
                 display:grid;
-                grid-template-columns: repeat(2, auto 4fr);
-                justify-items:center;
-                justify-content:center;
+                grid-template-columns: repeat(2, 1fr 4fr);
                 gap:2rem;
                 align-items:center;
+                justify-items:center;
                 .information__title, .information__text{
                     display:block;
+                    width:100%;
                     text-transform:uppercase;
                 }
 

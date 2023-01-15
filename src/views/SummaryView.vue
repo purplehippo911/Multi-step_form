@@ -8,7 +8,7 @@
     <section class="summary-view">
         <div class="container row">
             <section class="primary-section"> 
-                <HeroComponent informationTitle="Finishing up" informationText="Double-check everything looks OK before."/>
+                <HeroComponent class="hero-component" informationTitle="Finishing up" informationText="Double-check everything looks OK before."/>
                 <SummaryComponent/>
             </section>
 
@@ -23,7 +23,10 @@
 .summary-view {
     .row {
         flex-direction:column;
-
+        
+        .hero-component {
+            margin-bottom:2rem;
+        }
         .secondary-section {
             display:none;
             opacity:0;

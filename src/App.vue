@@ -23,32 +23,31 @@ import ConfirmationButtons from "./components/ConfirmationButtons.vue";
 </template>
 
 <style scoped lang="scss">
+/*main, header, footer {
+    outline:2px solid red;
+
+}*/
+
 header {
     height:100%;
     width:100%;
-    padding:5rem;
-    background-color: $Marineblue;
-    background: url("./assets/images/bg-sidebar-mobile.svg") no-repeat;
-    background-size:cover;
-
+    outline:2px solid blue;
     .container {
-        max-width:100%;
+        
+        height:100%;
     }
     
     .row {
-        flex-direction: column;
-        align-items:center;
-        justify-content: center;
-        align-self: center;
+        justify-content:center;
     }
     
     @media screen and (min-width: 800px) {
-        background: url("./assets/images/bg-sidebar-desktop.svg") no-repeat;
-        background-size:100%;
-        border-radius: 2rem;
+        width:clamp(80%, 80%, 120%);
         grid-area: head;
-        width:62%;
-        padding:1rem;
+        padding: 0;
+        .row {
+            flex-direction:column;
+        }
     }
 }
 
