@@ -5,7 +5,7 @@
 </script>
 
 <template>
-    <section class="summary-view">
+    <section class="summary-view" ref="summary_view">
         <div class="container row">
             <section class="primary-section"> 
                 <HeroComponent class="hero-component" informationTitle="Finishing up" informationText="Double-check everything looks OK before."/>
@@ -30,6 +30,21 @@
         .secondary-section {
             display:none;
             opacity:0;
+        }
+    }
+    
+    &.close {
+        .hero-component {
+            .primary-section {
+                display:none;
+                opacity:0;
+            }
+            .secondary-section {
+                display:block;
+                opacity:1;
+            }
+
+
         }
     }
 }

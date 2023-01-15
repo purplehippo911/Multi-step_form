@@ -6,8 +6,6 @@ export default {
       if(this.$route.path == "/")
        this.$router.push("/plan");
       else if(this.$route.path == "/plan") {
-        this.$refs.backButton.style.display = "block";
-        this.$refs.backButton.style.opacity = "1";
         this.$router.push("/add_ons")
       }
       else if(this.$route.path == "/add_ons")
@@ -18,16 +16,10 @@ export default {
       }
     },
       decrementPage() {
-        if(this.$route.path == "/") {
-          this.$refs.backButton.style.display = "hidden";
-          this.$refs.backButton.style.opacity = "0";
-          return "Can't go beyond this page!";
-        }
-        else {
-          this.$refs.backButton.style.display = "block";
-          this.$refs.backButton.style.opacity = "1";
           this.$router.go(-1);
-        }
+      },
+      finishSummary() {
+        this.$refs.summary_view.classList.add(".close");
       }
     }
   }
@@ -36,8 +28,9 @@ export default {
 <template>
   <section class="confirmation-buttons">
     <div class="container row">
-      <a class="back-button" ref="backButton" @click="decrementPage">Go Back</a>
-      <button class="next-button" @click="incrementPage">Next Step</button>  
+      <a v-show="this.$route.path != '/'" class="back-button" ref="backButton" @click="decrementPage">Go Back</a>
+      <button v-if="this.$route.path == '/summary'" class="next-button" @click="finishSummary">Finish</button>
+      <button v-else class="next-button" @click="incrementPage">Next Step</button>
     </div>
   </section>
 </template>
@@ -55,10 +48,8 @@ export default {
         .back-button {
             color:$CoolGray;
             padding:2rem;
-            display:none;
-            opacity:0;
             &:hover, &:focus {
-              background:$Purplishblue;
+              color:$Purplishblue;
             }
           }
           
