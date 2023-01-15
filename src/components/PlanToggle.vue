@@ -1,30 +1,28 @@
 <script>
+//import { useCounterStore } from '@/stores/annualCounter.js'
+
 export default {
+  name: "PlanToggle",
   data() {
     return {
       column:0,
-      isMonthly:true,
-      isYearly:false
     }
   },
-  name: "PlanToggle",
-  methods: {
+  /*setup() {
+    const counter = useCounterStore()
+  }*/
+    methods: {
     toggleOpen() {
       this.column++;
       
       if(this.column == 2 )  {
           this.$refs.slider.style.gridColumnStart = "3";
-          
-          this.isYearly = true;
-          this.isMonthly = false;
-          
+          //this.counter.checkYearly();
       }
       else if(this.column > 4 )  {
           this.column = 0;
           this.$refs.slider.style.gridColumnStart = "1";
-
-          this.isMonthly = true;
-          this.isYearly = false;
+          //this.counter.checkMonthly();
       }
     },
 }
@@ -77,7 +75,7 @@ export default {
     .slider__ball {
       background: $White;
       width: auto;
-      padding: 0.8rem;
+      padding: 0.9rem;
       border-radius: 50%;
       transition: 0.5s;
       grid-column: 0;

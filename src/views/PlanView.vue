@@ -4,6 +4,10 @@ import PlanComponent from '../components/PlanComponent.vue';
 import PlanToggle from '../components/PlanToggle.vue';
 </script>
 
+<script>
+  
+</script>
+
 <template>
   <section class="plan">
     <div class="container row">
