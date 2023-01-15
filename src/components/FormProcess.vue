@@ -45,8 +45,8 @@
     background-size:100%;
     padding:8rem;
     width:100%;
-    height:100%;
-    outline:2px solid red;
+    min-height:80%;
+    max-height:100%;
     .row {
         flex-direction:row;
         justify-content:center;

@@ -33,7 +33,8 @@
                 </picture>
                 <div class="plan__information">
                     <h3 class="plan__title">Pro</h3>
-                    <p class="plan__price">$15/mo</p>   
+                    <p v-if="isYearly" class="plan__price">$15/y99</p>  
+                    <p v-else class="plan__price">$15/mo</p>  
                 </div>
             </section>
         </div>

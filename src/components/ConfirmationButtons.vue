@@ -1,6 +1,11 @@
 <script>
 
 export default {
+  data() {
+    return {
+      lastPage:false
+    }
+  },
    methods: {
      incrementPage() {
       if(this.$route.path == "/")
@@ -19,14 +24,16 @@ export default {
           this.$router.go(-1);
       },
       finishSummary() {
-        this.$refs.summary_view.classList.add(".close");
+        const summaryView = document.querySelector(".summary-view");
+        this.lastPage = true;
+        summaryView.classList.add("close");
       }
     }
   }
 </script>
 
 <template>
-  <section class="confirmation-buttons">
+  <section class="confirmation-buttons" v-if="!lastPage">
     <div class="container row">
       <a v-show="this.$route.path != '/'" class="back-button" ref="backButton" @click="decrementPage">Go Back</a>
       <button v-if="this.$route.path == '/summary'" class="next-button" @click="finishSummary">Finish</button>

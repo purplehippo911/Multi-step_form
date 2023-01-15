@@ -1,27 +1,35 @@
 <script>
 export default {
+  data() {
+    return {
+      column:0,
+      isMonthly:true,
+      isYearly:false
+    }
+  },
   name: "PlanToggle",
   methods: {
     toggleOpen() {
-      let column = 0;
-      const toggler = document.querySelector(".slider__ball");
-      const anotherFunction = function() {
-          ++column;
-          console.log(column);
-        }
-        if (column == 2) {
-            toggler.style.gridColumnStart = "1";
-        }
-        else if (column == 4) {
-            toggler.style.gridColumnStart = "3";
-        }
-        else {
-          column = 2;
-        }
-        anotherFunction();
+      this.column++;
+      
+      if(this.column == 2 )  {
+          this.$refs.slider.style.gridColumnStart = "3";
+          
+          this.isYearly = true;
+          this.isMonthly = false;
+          
+      }
+      else if(this.column > 4 )  {
+          this.column = 0;
+          this.$refs.slider.style.gridColumnStart = "1";
+
+          this.isMonthly = true;
+          this.isYearly = false;
+      }
     },
-  },
 }
+}
+
 </script>
 
 <template>
@@ -43,6 +51,7 @@ export default {
 <style scoped lang="scss">
 .plan-toggler {
     background:$Magnolia;
+    padding:2rem;
     .row {
       flex-direction:row;
       align-items:center;

@@ -32,19 +32,15 @@
             opacity:0;
         }
     }
-    
     &.close {
-        .hero-component {
-            .primary-section {
-                display:none;
-                opacity:0;
-            }
-            .secondary-section {
-                display:block;
-                opacity:1;
-            }
-
-
+        .primary-section {
+            display:none;
+            opacity:0;
+        }
+        .secondary-section {
+            display:block;
+            opacity:1;
+            width:100%;
         }
     }
 }
