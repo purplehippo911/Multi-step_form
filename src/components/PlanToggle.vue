@@ -25,19 +25,19 @@ export default {
 </script>
 
 <template>
-    <div class="plan-toggler">
-        <div class="container row">
-            <h3 class="subscription-toggle__plan-title">Monthly</h3>
-            
-            <div class="slider">
-                <div class="slider__item" @click="toggleOpen">
-                    <strong class="slider__ball" @click="toggleOpen" ref="slider"></strong>
-                </div>
-            </div>
-
-            <h3 class="subscription-toggle__plan-title">Yearly</h3>
+  <section class="plan-toggler">
+    <div class="container row">
+      <h3 class="subscription-toggle__plan-title">Monthly</h3>
+      
+      <div class="slider">
+        <div class="slider__item" @click="toggleOpen">
+          <strong class="slider__ball" @click="toggleOpen" ref="slider"></strong>
         </div>
+      </div>
+
+      <h3 class="subscription-toggle__plan-title">Yearly</h3>
     </div>
+  </section>
 </template>
 
 <style scoped lang="scss">

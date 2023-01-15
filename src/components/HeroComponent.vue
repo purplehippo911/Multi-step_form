@@ -2,16 +2,14 @@
 
 defineProps ({
     informationTitle:String,
-    informationText:String,
-    usesH2:True
+    informationText:String
 })
 </script>
 
 <template>
     <section class="information__section">
         <div class="container row">
-            <h2 v-if="usesH2" class="information__title"> {{ informationTitle }} </h2>
-            <h3 v-else class="information__title"> {{ informationTitle }} </h3>
+            <h2 class="information__title"> {{ informationTitle }} </h2>
             <p class="information__text"> {{ informationText }} </p>
         </div>
     </section>
@@ -28,7 +26,7 @@ defineProps ({
   color:$Marineblue;
 }
 .information__text {
-    color:$CoolGray;
+color:$CoolGray;
 }
 
 </style>

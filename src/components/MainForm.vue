@@ -5,21 +5,22 @@
   <form id="form">
     <div class="container row">
 
-      <div class="form__input-wrapper">
+      <section class="form__input-wrapper">
         <label for="name" class="form__label">Name</label>
         <input type="text" class="form__input" placeholder="e.g. Stephen King">
-      </div>
+      </section>
           
-      <div class="form__input-wrapper">
+      <section class="form__input-wrapper">
         <label for="email address" class="form__label" placeholder="John Doe">Email Address</label>
         <input type="text" class="form__input" placeholder="e.g. stephenking@lorem.com">
-      </div>
+      </section>
           
 
-      <div class="form__input-wrapper">
+      <section class="form__input-wrapper">
         <label for="phone number" class="form__label">Phone Number</label>
         <input type="text" class="form__input" placeholder="e.g. +1 234 567 890">
-      </div>
+      </section>
+      
     </div>
   </form>
 </template>
@@ -39,8 +40,14 @@
       input {
         width:100%;
         padding:1em 2em;
+        color:$Pastelblue;
         padding-inline-start:1rem;
+        border-radius: .5rem;
+        border:2px solid $Pastelblue;
+        &:hover, &:focus-visible {
+          border: 1px solid $Purplishblue;
+        }
     }
   }
-    }
+ }
 </style>

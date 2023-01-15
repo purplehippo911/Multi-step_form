@@ -1,15 +1,15 @@
 <script setup>
-import InformationComponent from "../components/InformationComponent.vue";
+import HeroComponent from "../components/HeroComponent.vue";
 import MainForm from "../components/MainForm.vue";
 </script>
 
 <template>
-  <div class="main-view">
+  <section class="main-view">
     <div class="container row">
-      <InformationComponent informationTitle="Personal info" informationText="Please provide your name, email address, and phone number."/>
+      <HeroComponent informationTitle="Personal info" informationText="Please provide your name, email address, and phone number."/>
       <MainForm/>
     </div>
-  </div>
+  </section>
 </template>
 
 <style lang="scss">

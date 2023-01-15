@@ -2,16 +2,17 @@
 </script>
 
 <template>
-    <div class="plan-component">
+    <section class="plan-component">
         <div class="container row">
+
             <section class="plan__box plan__box--arcade">
                 <picture class="image__wrapper">
                     <img src="../assets/images/icon-arcade.svg" alt="Joystick Drawing. Arcade plan.">
                 </picture>
-                    <div class="plan__information">
-                        <h3 class="plan__title">Arcade</h3>
-                        <p class="plan__price">$9/mo</p>
-                    </div>
+                <div class="plan__information">
+                    <h3 class="plan__title">Arcade</h3>
+                    <p class="plan__price">$9/mo</p>
+                </div>
             </section>
 
             <section class="plan__box plan__box--arcade" href="#">
@@ -36,7 +37,7 @@
                 </div>
             </section>
         </div>
-    </div>
+    </section>
 </template>
 
 <style scoped lang="scss">
@@ -46,7 +47,6 @@
       flex-direction:column;
       gap:2rem;
       .plan__box {
-        width:100%;
         padding:1.2rem;
         background:$White;
         border:1px solid $Pastelblue;
@@ -55,11 +55,20 @@
         align-items:center;
         justify-items:start;
         cursor:pointer;
-        &:hover, &:focus, &:active {
+        &:hover, &:focus, &:active, &:focus-within {
           background:$Magnolia;
-          border:1px solid $Marineblue;
+          border:1px solid $Purplishblue;
         }
-      }
     }
-  }
+}
+@media screen and (min-width:800px ) {
+        .row {
+            flex-direction:row;
+            .plan__box {
+                grid-template-columns:repeat(1, minmax(100px, 1fr));
+                grid-template-rows:repeat(2, minmax(100px, 1fr));
+            }
+        }    
+    }
+}
   </style>

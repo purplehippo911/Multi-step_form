@@ -2,7 +2,7 @@
 </script>
 
 <template>
-<section class="add-ons__options">
+  <section class="add-ons__options">
     <div class="container row">
         <section class="options__option">
             <input type="checkbox" name="checkbox" id="checkbox">
@@ -11,7 +11,7 @@
                 <h3 class="information__title">Online service</h3>
                 <p class="information__text">Access to multiplayer games</p>
             </div>
-            <a href="#" class="option__price">+$1/mo</a>
+            <strong class="option__price">+$1/mo</strong>
         </section>    
         
         <section class="options__option">
@@ -22,7 +22,7 @@
                 <p class="information__text">Extra 1TB of cloud save</p>
             </div>
 
-            <a href="#" class="option__price">+$2/mo</a>
+            <strong class="option__price">+$2/mo</strong>
         </section>    
         
         <section class="options__option">
@@ -36,7 +36,7 @@
             <strong class="option__price">+$2/mo</strong>
         </section>    
     </div>
-</section>
+  </section>
 </template>
 
 <style scoped lang="scss">

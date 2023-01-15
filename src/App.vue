@@ -54,11 +54,11 @@ header {
 
 main {
     position: relative;
-    top: -3rem;
+    top: -6rem;
     z-index:1;
     .container {
         max-width: 600px;
-        padding:0 3rem;
+        padding:3rem 3rem;
         border-radius: 1rem;
         background: $White;
     }

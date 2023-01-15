@@ -50,6 +50,10 @@ main, header, footer {
   }
 }
 
+input, button, a {
+  cursor:pointer;
+}
+
 .steps__count, a,
 .green {
   text-decoration: none;

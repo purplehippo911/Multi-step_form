@@ -8,7 +8,7 @@
                 <div class="container grid">
                     <section class="summary__section summary__plan">
                         <strong class="summary__title">Arcade (Montly)</strong>
-                        <a href="#" class="summary__change">Change</a>
+                        <a href="/plan" class="summary__change">Change</a>
                         <strong class="summary__price summary__price--bold">$9/mo</strong>
                     </section>
 

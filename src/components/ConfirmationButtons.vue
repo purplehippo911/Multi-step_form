@@ -1,50 +1,43 @@
 <script>
 
 export default {
-  data() {
-      return {
-        isBackButtonVisible:false
-      }
-    },
-    methods: {
-      incrementPage() {
-        if(this.$route.path == "/") {
-          this.$router.push("/plan");
-          this.isBackButtonVisible = true;
-      }
+   methods: {
+     incrementPage() {
+      if(this.$route.path == "/")
+       this.$router.push("/plan");
       else if(this.$route.path == "/plan") {
+        this.$refs.backButton.style.display = "block";
+        this.$refs.backButton.style.opacity = "1";
         this.$router.push("/add_ons")
       }
       else if(this.$route.path == "/add_ons")
         this.$router.push("/summary")
-      else
-        throw errror;
+      else {
+        throw error;
         console.log("cant route any further")
+      }
     },
-    
-    decrementPage() {
-      if(this.$route.path == "/plan")
-        this.$router.push("/");
-        this.isBackButtonVisible = false;
-      else if(this.$route.path == "/add_ons")
-        this.$router.push("/plan");
-      else if(this.$route.path == "/summary") 
-        this.$router.push("/add_ons");  
-      else 
-        return "Cant turn back."
+      decrementPage() {
+        if(this.$route.path == "/") {
+          this.$refs.backButton.style.display = "hidden";
+          this.$refs.backButton.style.opacity = "0";
+          return "Can't go beyond this page!";
+        }
+        else {
+          this.$refs.backButton.style.display = "block";
+          this.$refs.backButton.style.opacity = "1";
+          this.$router.go(-1);
+        }
+      }
     }
-  },
-  mounted() {
-    this.checkBackButton;
-  },
-} 
+  }
 </script>
 
 <template>
   <section class="confirmation-buttons">
     <div class="container row">
-      <a class="back-button" v-show="isBackButtonVisible" @click="decrementPage">Go Back</a>
-      <button class="next-button" @click="incrementPage">Next</button>  
+      <a class="back-button" ref="backButton" @click="decrementPage">Go Back</a>
+      <button class="next-button" @click="incrementPage">Next Step</button>  
     </div>
   </section>
 </template>
@@ -62,17 +55,27 @@ export default {
         .back-button {
             color:$CoolGray;
             padding:2rem;
+            display:none;
+            opacity:0;
+            &:hover, &:focus {
+              background:$Purplishblue;
+            }
           }
           
           .next-button {
             margin-left:auto;
-            padding: .8rem 2.3rem;
+            padding: .5rem 1.5rem;
             border-radius: 1rem;
+            font:inherit;
+            font-weight:500;
             border:none;
             align-self: center;
             cursor:pointer;
             background:$Marineblue;
             color:$White;
+            &:hover, &:focus {
+              background:$Purplishblue;
+            }
           }
         }
 }

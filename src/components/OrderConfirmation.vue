@@ -2,7 +2,7 @@
 </script>
 
 <template>
-    <div class="order-confirmation">
+    <section class="order-confirmation">
         <div class="container row">
             <picture>
                 <img src="../assets/images/icon-checkmark.svg" alt="Your order was confirmed! A checkmark for you">
@@ -16,7 +16,7 @@
               support@loremgaming.com.  
             </p>
         </div>
-    </div>
+    </section>
 </template>
 
 <style lang="scss">
