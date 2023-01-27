@@ -37,7 +37,7 @@ Desktop:
 
 Mobile:
 
-![Mobile](./Multi-steps form for mobile.png)
+![Mobile](./Multi-steps_form_for_mobile.png)
 
 
 
