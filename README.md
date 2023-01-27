@@ -57,8 +57,9 @@ Mobile:
 - Mobile-first workflow
 - [Vue JS](https://vuejs.org/) - JS library
 - [VueCli](https://nextjs.org/) - Vue Cli
-- [VueRouter](https://nextjs.org/) - Part of Vue JS - for routing purposes
-- [Pinia]() - State management
+- [VueRouter](https://nextjs.org/) - For routing purposes in Vue
+- [Pinia]() - State management for Vue Application
+- [VeeValidate](https://vee-validate.logaretm.com/v4/) - For easier form validation in Vue
 
 
 ### What I learned

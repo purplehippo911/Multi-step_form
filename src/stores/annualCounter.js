@@ -4,11 +4,10 @@ export const useCounterStore = defineStore("counter", () => {
   state: () => {
     return {
         isMonthly: true,
-        isYearly:false 
-
+        isYearly:false
       }
   },
-  actions: {
+  actions: () => {
     checkMonthly (state) {
       state.isMonthly = true;
       state.isYearly = false;

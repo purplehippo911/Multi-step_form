@@ -7,17 +7,18 @@ export default {
     }
   },
    methods: {
-     incrementPage() {
-      if(this.$route.path == "/")
-       this.$router.push("/plan");
+     incrementPage(e) {
+      if(this.$route.path == "/") {
+        this.$router.push("/plan");
+      }
       else if(this.$route.path == "/plan") {
         this.$router.push("/add_ons")
       }
       else if(this.$route.path == "/add_ons")
         this.$router.push("/summary")
       else {
-        throw error;
         console.log("cant route any further")
+        throw error;
       }
     },
       decrementPage() {
@@ -37,7 +38,7 @@ export default {
     <div class="container row">
       <a v-show="this.$route.path != '/'" class="back-button" ref="backButton" @click="decrementPage">Go Back</a>
       <button v-if="this.$route.path == '/summary'" class="next-button" @click="finishSummary">Finish</button>
-      <button v-else class="next-button" @click="incrementPage">Next Step</button>
+      <input type="submit" v-else class="next-button" @click="incrementPage" value="Next Step"/>
     </div>
   </section>
 </template>
