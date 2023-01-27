@@ -37,7 +37,7 @@ Desktop:
 
 Mobile:
 
-![Mobile](./screenshot.jpg)
+![Mobile](./Multi-steps form for mobile.png)
 
 
 
