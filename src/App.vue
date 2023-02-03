@@ -23,17 +23,12 @@ import ConfirmationButtons from "./components/ConfirmationButtons.vue";
 </template>
 
 <style scoped lang="scss">
-/*main, header, footer {
-    outline:2px solid red;
-
-}*/
 
 header {
-    height:100%;
-    width:100%;
     .container {
-        
+        width:100%;
         height:100%;
+        margin:0 auto;
     }
     
     .row {
@@ -41,6 +36,7 @@ header {
     }
     
     @media screen and (min-width: 800px) {
+        padding:0 5rem;
         width:clamp(80%, 80%, 120%);
         grid-area: head;
         padding: 0;

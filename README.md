@@ -37,13 +37,13 @@ Desktop:
 
 Mobile:
 
-![Mobile](./screenshot.jpg)
+![Mobile](./Multi-steps_form_for_mobile.png)
 
 
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [mySolution](https://www.frontendmentor.io/solutions/multisteps-form-made-with-vue-and-vite-_zIuR9WshW)
 - Live Site URL: [MyLiveSite](https://form-multistep.netflify.app)
 
 ## My process
@@ -57,34 +57,40 @@ Mobile:
 - Mobile-first workflow
 - [Vue JS](https://vuejs.org/) - JS library
 - [VueCli](https://nextjs.org/) - Vue Cli
-- [VueRouter](https://nextjs.org/) - Part of Vue JS - for routing purposes
-- [Pinia]() - State management
+- [VueRouter](https://nextjs.org/) - For routing purposes in Vue
+- [Pinia]() - State management for Vue Application
+- [VeeValidate](https://vee-validate.logaretm.com/v4/) - For easier form validation in Vue
 
 
 ### What I learned
 
+I learned how to use Vue Router to route to different routes, either via ´router-link´ or by pushing the view by using `this.$router.push()´. I also got to know my weaknesses and what I should improve on, and that is concepts like form validation and data storage.
+
 Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
 
-To see how you can add code snippets, see below:
+```vue
+<script setup>
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
+defineProps ({
+    informationTitle:String,
+    informationText:String
+})
+</script>
+
+<template>
+    <section class="information__section">
+        <div class="container row">
+            <h2 class="information__title"> {{ informationTitle }} </h2>
+            <p class="information__text"> {{ informationText }} </p>
+        </div>
+    </section>
+</template>
 ```
 
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+I'm going to focus on improving my knowledge about Vue, try making fullstack applications with NodeJs and make more projects with Python.
 
 
 ### Useful resources
@@ -102,12 +108,9 @@ Use this section to outline areas that you want to continue focusing on in futur
 - Twitter - [@muggie43](https://www.twitter.com/muggie43)
 - LinkedIn - [myLinkedIn](https://www.linkedin.com/in/omer-a-26815825b)
 
-
-
 ## Acknowledgments
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
+(Binh2's version)[https://github.com/Binh2/multi-step-form/blob/main/src/views/InfoView.vue]
 
 
 ## Recommended IDE Setup
