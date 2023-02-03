@@ -1,6 +1,6 @@
 <script setup>
-import HeroComponent from "../components/HeroComponent.vue";
-import MainForm from "../components/MainForm.vue";
+  import HeroComponent from "../components/HeroComponent.vue";
+  import MainForm from "../components/MainForm.vue";
 </script>
 
 <template>

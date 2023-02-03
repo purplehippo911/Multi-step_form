@@ -79,11 +79,10 @@ input, button, a {
   #app {
     display: grid;
     grid-template-areas:
-    "head main main"
-    "head foot foot"
+    "head main"
+    "head foot"
     ;
     align-items: center;
-    padding: 1rem;
     background:$White;
     border-radius:1rem;
   }

@@ -27,16 +27,24 @@ import HeroComponent from './HeroComponent.vue';
     text-align:center;
     
     picture {
-        width:100%;
-        background:url("../assets/images/icon-checkmark.svg") no-repeat;
-        background-size:100%;
-        padding:2rem;
-        display:block;
+        align-self:center;
+        background: $Strawberryred;
+        border-radius:3rem;
+        padding: .7rem;
         img {
-            max-width:100%;
-            display:block;
+            border-radius:2rem;
+            padding: 1.5rem;
+            background:white;
     
         }
     }
+}
+
+svg {
+    height:60%;
+    width:60%;
+    stroke:$Strawberryred;
+    fill:red;
+    background: white;
 }
 </style>

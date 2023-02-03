@@ -53,7 +53,15 @@
     &:has(focus) {
         background:red;
     }
+    @media screen and (min-width:800px) {
+      grid-template-columns: 5rem 13rem 5rem;
+      padding: 1rem;
+      gap: 2rem;
+      justify-items: center;
+      text-align: center;
+    }
 }
+    
 
 .add-ons__options {
     width: 100%;

@@ -31,7 +31,6 @@ import ConfirmationButtons from "./components/ConfirmationButtons.vue";
 header {
     height:100%;
     width:100%;
-    outline:2px solid blue;
     .container {
         
         height:100%;
