@@ -14,8 +14,9 @@ export default {
       else if(this.$route.path == "/plan") {
         this.$router.push("/add_ons")
       }
-      else if(this.$route.path == "/add_ons")
+      else if(this.$route.path == "/add_ons") {
         this.$router.push("/summary")
+      }
       else {
         console.log("cant route any further")
         throw error;

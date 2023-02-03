@@ -3,7 +3,7 @@
     <div class="container row">
       
       <section class="steps-wrapper">
-          <a href="#" class="steps__count">1</a>
+          <a href="#" class="steps__count" :class ="(this.$route.path == '/')?'active':'steps__count'">1</a>
           <div class="steps__information">
               <p class="information__text">Step 1</p>
               <h3 class="information__title">Your info</h3>
@@ -11,7 +11,7 @@
       </section>
       
       <section class="steps-wrapper">
-          <a href="#" class="steps__count">2</a>
+          <a href="#" class="steps__count" :class ="(this.$route.path == '/plan')?'active':'steps__count'">2</a>
           <div class="steps__information">
               <p class="information__text">Step 2</p>
               <h3 class="information__title">Select Plan</h3>
@@ -19,7 +19,7 @@
       </section>
       
       <section class="steps-wrapper">
-          <a href="#" class="steps__count">3</a>
+          <a href="#" class="steps__count" :class ="(this.$route.path == '/add_ons')?'active':'steps__count'">3</a>
           <div class="steps__information">
               <p class="information__text">Step 3</p>
               <h3 class="information__title">Add-Ons</h3>
@@ -27,7 +27,7 @@
       </section>
       
       <section class="steps-wrapper">
-          <a href="#" class="steps__count">4</a>
+          <a href="#" class="steps__count" :class ="(this.$route.path == '/summary')?'active':'steps__count'">4</a>
           <div class="steps__information">    
             <p class="information__text">Step 4</p>
             <h3 class="information__title">Summary</h3>
@@ -65,9 +65,11 @@
                 display: flex;
                 align-items: center;
                 justify-content:center;
-                &:active, &:target, &:visited, &:active, &:hover {
-                    background:$Pastelblue;
+                
+                &.active {
+                    background:$Lightblue;
                 }
+                
             }
             .information__text, .information__title{
                 display:none;
@@ -106,5 +108,6 @@
     }
 
 }
+
 
 </style>

@@ -35,7 +35,7 @@ export default {
     <div class="container row">
       <h3 class="subscription-toggle__plan-title">Monthly</h3>
       
-      <div class="slider">
+      <div class="slider" @click="toggleOpen">
         <div class="slider__item" @click="toggleOpen">
           <strong class="slider__ball" @click="toggleOpen" ref="slider"></strong>
         </div>
@@ -62,6 +62,7 @@ export default {
 
 .slider {
   width: 30%;
+  transition:0.7s;
   .slider__item {
     width: 80%;
     display: grid;
@@ -70,16 +71,19 @@ export default {
     justify-items: center;
     justify-self: center;
     background: $Marineblue;
-    padding: 0.1rem;
+    padding: 0.3rem;
     border-radius: 20px;
     .slider__ball {
       background: $White;
       width: auto;
-      padding: 0.9rem;
+      padding: 0.7rem;
       border-radius: 50%;
       transition: 0.5s;
       grid-column: 0;
       box-shadow: -1px -1px $Marineblue;
+      &:hover {
+        transform:scale(1.2);
+      }
     }
   }
 }
