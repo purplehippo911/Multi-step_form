@@ -11,7 +11,9 @@
                 </picture>
                 <div class="plan__information">
                     <h3 class="plan__title">Arcade</h3>
+                    <!-- <p class="plan__price">$90/yr</p> -->
                     <p class="plan__price">$9/mo</p>
+                    <!-- <p v-show="this.$refs.slider.style.gridColumnStart == '3'">2 months free</p> -->
                 </div>
             </section>
 
@@ -22,8 +24,9 @@
 
                 <div class="plan__information">
                     <h3 class="plan__title">Advanced</h3>
+                    <!-- <p v-if="this.$refs.slider.style.gridColumnStart == '3'" class="plan__price">$120/yr</p> -->
                     <p class="plan__price">$12/mo</p>
-                    <p v-if="isYearly" class="plan__price">$12/mo</p>
+                    <!-- <p v-show="this.$refs.slider.style.gridColumnStart == '3'">2 months free</p> -->
                 </div>
             </section>
                 
@@ -33,8 +36,9 @@
                 </picture>
                 <div class="plan__information">
                     <h3 class="plan__title">Pro</h3>
-                    <p v-if="isYearly" class="plan__price">$15/y99</p>  
-                    <p v-else class="plan__price">$15/mo</p>  
+                    <!-- <p v-if="this.$refs.slider.style.gridColumnStart == '3'" class="plan__price">$150/yr</p>   -->
+                    <p class="plan__price">$15/mo</p>
+                    <!-- <p v-show="this.$refs.slider.style.gridColumnStart == '3'">2 months free</p> -->
                 </div>
             </section>
         </div>

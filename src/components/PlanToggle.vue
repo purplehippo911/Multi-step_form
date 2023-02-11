@@ -1,32 +1,12 @@
-<script>
-//import { useCounterStore } from '@/stores/annualCounter.js'
+<script setup>
+// importing store
+import {usePlanStore} from "../stores/planCounter.js";
 
-export default {
-  name: "PlanToggle",
-  data() {
-    return {
-      column:0,
-    }
-  },
-  /*setup() {
-    const counter = useCounterStore()
-  }*/
-    methods: {
-    toggleOpen() {
-      this.column++;
-      
-      if(this.column == 2 )  {
-          this.$refs.slider.style.gridColumnStart = "3";
-          //this.counter.checkYearly();
-      }
-      else if(this.column > 4 )  {
-          this.column = 0;
-          this.$refs.slider.style.gridColumnStart = "1";
-          //this.counter.checkMonthly();
-      }
-    },
-}
-}
+const planStore = usePlanStore()
+
+// importing funtions
+const {toggleOpen} = planStore;
+
 
 </script>
 
@@ -37,7 +17,7 @@ export default {
       
       <div class="slider" @click="toggleOpen">
         <div class="slider__item" @click="toggleOpen">
-          <strong class="slider__ball" @click="toggleOpen" ref="slider"></strong>
+          <strong class="slider__ball" @click="toggleOpen" ref="slider" aria-checked="false"></strong>
         </div>
       </div>
 
@@ -47,6 +27,10 @@ export default {
 </template>
 
 <style scoped lang="scss">
+
+.active .slider__ball {
+  grid-column:3;
+}
 .plan-toggler {
     background:$Magnolia;
     padding:2rem;
