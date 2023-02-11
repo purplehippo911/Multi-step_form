@@ -1,11 +1,14 @@
 <script setup>
 // importing store
 import {usePlanStore} from "../stores/planCounter.js";
+import { storeToRefs } from 'pinia';
+
 
 const planStore = usePlanStore()
 
 // importing funtions
-const {toggleOpen} = planStore;
+const {toggleOpen} = planStore
+
 
 
 </script>

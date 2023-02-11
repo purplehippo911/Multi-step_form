@@ -1,4 +1,11 @@
-<script>
+<script setup>
+import { usePlanStore } from '../stores/planCounter';
+import { storeToRefs } from 'pinia';
+
+const planStore = usePlanStore()
+
+const {isMonthly, isYearly} = storeToRefs(planStore)
+
 </script>
 
 <template>
@@ -11,9 +18,11 @@
                 </picture>
                 <div class="plan__information">
                     <h3 class="plan__title">Arcade</h3>
-                    <!-- <p class="plan__price">$90/yr</p> -->
-                    <p class="plan__price">$9/mo</p>
-                    <!-- <p v-show="this.$refs.slider.style.gridColumnStart == '3'">2 months free</p> -->
+                    
+                    <p class="plan__price" v-if="isYearly">$90/yr</p>
+                    <p class="plan__price" v-else>$9/mo</p>
+
+                    <p v-show="isYearly">2 months free</p>
                 </div>
             </section>
 
