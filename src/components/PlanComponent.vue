@@ -2,14 +2,16 @@
 import { usePlanStore } from '../stores/planCounter';
 import { storeToRefs } from 'pinia';
 
-const planStore = usePlanStore()
+const planStore = usePlanStore();
 
-const {isMonthly, isYearly} = storeToRefs(planStore)
+// const {} = planStore;
+
+const {checkPlan, isMonthly, isYearly} = storeToRefs(planStore);
 
 </script>
 
 <template>
-    <section class="plan-component">
+    <section class="plan-component" v-on:waiting="checkPlan">
         <div class="container row">
 
             <section class="plan__box plan__box--arcade">

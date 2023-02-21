@@ -10,7 +10,6 @@ const planStore = usePlanStore()
 const {toggleOpen} = planStore
 
 
-
 </script>
 
 <template>
